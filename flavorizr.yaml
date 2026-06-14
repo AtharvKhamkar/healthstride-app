@@ -1,0 +1,17 @@
+flavors:
+  dev:
+    app:
+      name: "HealthStride Dev"
+
+    android:
+      applicationId: "com.healthstride.app.dev"  
+    ios:
+      bundleId: "com.healthstride.app"
+  prod:
+    app:
+      name: "HealthStride"
+
+    android:
+      applicationId: "com.healthstride.app"
+    ios:
+      bundleId: "com.healthstride.app"

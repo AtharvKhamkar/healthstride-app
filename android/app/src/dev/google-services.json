@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "412128374578",
+    "project_id": "healthstride-dev-acad5",
+    "storage_bucket": "healthstride-dev-acad5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412128374578:android:f7d0b9ead33a60adcf312b",
+        "android_client_info": {
+          "package_name": "com.healthstride.app.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKwjuFHWtPwQLPyBoxk7ALJwiF8gzGVy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
