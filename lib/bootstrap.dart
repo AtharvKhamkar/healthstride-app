@@ -19,7 +19,5 @@ Future<void> bootstrap(Flavor flavor) async {
 
   bool isAvailable = await health.isHealthConnectAvailable();
 
-  debugPrint('Health Connect Available: $isAvailable');
-
   runApp(const App());
 }
