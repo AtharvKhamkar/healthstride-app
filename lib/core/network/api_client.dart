@@ -1,10 +1,12 @@
 import 'dart:developer';
 import 'dart:io';
 import 'dart:ui';
+import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:healthstride/core/config/enviroment_config.dart';
 import 'package:healthstride/core/network/api_exception.dart';
+import 'package:healthstride/core/network/api_response.dart';
 import '../storage/secure_storage.dart';
 import 'api_interceptor.dart';
 
@@ -65,19 +67,27 @@ class ApiClient {
     }
   }
 
-  Future<Response> post(
+  Future<Either<String, Map<String, dynamic>>> post(
     String path, {
     dynamic data,
     Map<String, dynamic>? queryParameters,
     CancelToken? cancelToken,
   }) async {
     try {
-      return await _dio.post(
+      Response response = await _dio.post(
         path,
         data: data,
         queryParameters: queryParameters,
         cancelToken: cancelToken,
       );
+
+      ApiResponse apiResponse = ApiResponse.fromJson(response.data, null);
+
+      if (apiResponse.success) {
+        return Right(apiResponse.data);
+      } else {
+        return Left(apiResponse.message ?? '');
+      }
     } on DioException catch (e) {
       throw _handleError(e);
     }
