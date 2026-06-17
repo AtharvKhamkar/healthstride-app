@@ -20,9 +20,11 @@ class SyncHealthDataRequest {
   }
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'source': source,
-      'records': records.map((x) => x.toJson()).toList(),
+      'records': records.map((record) {
+        return {'dataType': record.type.name, 'payload': record.toJson()};
+      }).toList(),
     };
   }
 

@@ -4,6 +4,7 @@ class RouteNames {
   //root
   static const String splash = 'splash';
   static const String home = 'home';
+  static const String healthSync = 'healthSync';
 }
 
 class RoutePaths {
@@ -11,4 +12,5 @@ class RoutePaths {
 
   static const String splash = '/';
   static const String home = '/home';
+  static const String healthSync = '/health-sync';
 }

@@ -20,7 +20,7 @@ class EnvironmentConfig {
   });
 
   static const development = EnvironmentConfig(
-    baseUrl: '',
+    baseUrl: 'http://192.168.0.103:3010',
     guestApiKey: '',
     xApiKey: '',
     xApiSecretKey: '',

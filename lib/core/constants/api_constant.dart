@@ -1,4 +1,3 @@
-
 class ApiEndpoints {
   ApiEndpoints._();
 
@@ -10,5 +9,5 @@ class ApiEndpoints {
   static const String registerCompleteProfile =
       '/auth/register/complete-profile';
   static const String refreshToken = '/auth/refresh-token';
-  static const String syncHealthData = '/sync/health-data';
+  static const String syncHealthData = '/health/sync';
 }

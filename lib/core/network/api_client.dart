@@ -73,6 +73,8 @@ class ApiClient {
     Map<String, dynamic>? queryParameters,
     CancelToken? cancelToken,
   }) async {
+    print('TYPE: ${data.runtimeType}');
+    print('BODY: $data');
     try {
       Response response = await _dio.post(
         path,

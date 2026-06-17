@@ -2,7 +2,6 @@ import 'package:dartz/dartz.dart';
 import 'package:healthstride/core/constants/api_constant.dart';
 import 'package:healthstride/core/errors/failure.dart';
 import 'package:healthstride/core/network/api_client.dart';
-import 'package:healthstride/shared/models/sync_health_data_request.dart';
 
 class HealthSyncApi {
   final ApiClient _apiClient;
@@ -10,7 +9,7 @@ class HealthSyncApi {
   HealthSyncApi({required ApiClient apiClient}) : _apiClient = apiClient;
 
   Future<Either<Failure, Map<String, dynamic>>> syncHealthData({
-    required SyncHealthDataRequest syncHealthDataRequest,
+    required Map<String,dynamic> syncHealthDataRequest,
   }) async {
     final response = await _apiClient.post(
       ApiEndpoints.syncHealthData,
